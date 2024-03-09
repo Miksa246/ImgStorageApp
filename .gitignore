@@ -1,33 +1,85 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Compiled class files
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-### IntelliJ IDEA ###
-.idea
+# Maven wrapper files
+!.mvn/wrapper/maven-wrapper.properties
+!.mvn/wrapper/MavenWrapperDownloader.java
+
+# Logs and databases
+*.log
+*.sql
+*.jlg
+/h2*.db
+*.h2.db
+
+# Java heap dumps
+*.hprof
+
+# Project-specific temporary files/folders
+/temp/
+/tmp/
+/out/
+
+# MAC OS specific
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# IDE-specific files/folders
+/.idea/
 *.iws
 *.iml
 *.ipr
+*.swp
+*~
 
-### NetBeans ###
+# Build-specific folders
+/target/
+/build/
+
+# Ignore Spring Boot configuration metadata for properties auto-completion
+.springBeans
+.sts4-cache
+
+# Ignore Visual Studio Code folders
+.vscode/
+
+# Ignore NetBeans files and folders
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# Ignore Eclipse files and folders
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
