@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Image List</title>
+</head>
+<body>
+<h1>Image List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Owner</th>
+        <th>File Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="image : ${images}">
+        <td th:text="${image.id}"></td>
+        <td th:text="${image.name}"></td>
+        <td th:text="${image.owner}"></td>
+        <td th:text="${image.fileSize}"></td>
+    </tr>
+    </tbody>
+
+</table>
+<!-- Link to navigate back to the upload form -->
+<a href="/">Upload more images</a>
+</body>
+</html>

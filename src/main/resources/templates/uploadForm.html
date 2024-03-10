@@ -8,6 +8,7 @@
         <form method="POST" enctype="multipart/form-data" action="/upload">
             <label for="file">Choose file to upload</label>
             <input type="file" id="file" name="file" required>
+            <input type="text" id="name" name="name" placeholder="Enter image name" required>
             <input type="text" id="owner" name="owner" placeholder="Owner" required>
             <button type="submit">Upload</button>
         </form>
