@@ -20,6 +20,9 @@
         <td th:text="${image.name}"></td>
         <td th:text="${image.owner}"></td>
         <td th:text="${image.fileSize}"></td>
+        <td>
+            <a th:href="@{/delete/{id}(id=${image.id})}" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
     </tr>
     </tbody>
 

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Image Upload</title>
-    </head>
-    <body>
-        <h1>Upload Image</h1>
-        <form method="POST" enctype="multipart/form-data" action="/upload">
-            <label for="file">Choose file to upload</label>
-            <input type="file" id="file" name="file" required>
-            <input type="text" id="name" name="name" placeholder="Enter image name" required>
-            <input type="text" id="owner" name="owner" placeholder="Owner" required>
-            <button type="submit">Upload</button>
-        </form>
-    </body>
+<head>
+    <title>Upload Image</title>
+</head>
+<body>
+<h1>Upload Image</h1>
+<form method="POST" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file" required>
+    <input type="text" name="name" placeholder="Enter image name" required>
+    <input type="text" name="owner" placeholder="Owner" required>
+    <button type="submit">Upload</button>
+</form>
+<!-- Link to navigate to the images list view -->
+<a href="/images">View uploaded images</a>
+</body>
 </html>

@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import com.example.imgstorageapp.dto.ImageFileDTO;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import java.util.List;
@@ -68,6 +69,18 @@ public class ImageFileController {
 
         model.addAttribute("images", images);
         return "imageList"; // The name of the Thymeleaf template
+    }
+
+    // Tehtävä 5: Kuvan poistaminen
+    @GetMapping("/delete/{id}")
+    public String deleteImage(@PathVariable Long id, RedirectAttributes redirectAttributes) {
+        try {
+            imageFileRepository.deleteById(id);
+            redirectAttributes.addFlashAttribute("message", "Image deleted successfully!");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("errorMessage", "Error deleting image.");
+        }
+        return "redirect:/images";
     }
 }
 
